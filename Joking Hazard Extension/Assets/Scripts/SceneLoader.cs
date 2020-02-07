@@ -5,13 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-   void backToMenu()
+   public void backToMenu()
     {
-        
+        SceneManager.LoadScene("Mainmenu");
     }
 
-    void loadCredits()
+    public void loadCredits()
     {
-        
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void Disclaimer()
+    {
+        SceneManager.LoadScene("Disclaimer");
+    }
+
+    public void playGame()
+    {
+        SceneManager.LoadScene("EditorScene");
+    }
+
+    public void goToRules()
+    {
+        SceneManager.LoadScene("Rules");
     }
 }
