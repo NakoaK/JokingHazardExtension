@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/EditorScene.unity
+=======
+- path: Assets/Scenes/DragAndDropScene.unity
+>>>>>>> a077bd19aef9cc1e476f70346bf7fbb167ff37d7
   isLoaded: 1
   isActive: 1
   isSubScene: 0
