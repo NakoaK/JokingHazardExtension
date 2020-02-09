@@ -1,0 +1,126 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class colorChange : MonoBehaviour
+{
+    public GameObject Brush;
+
+    public Sprite blackON;
+    public Sprite blackOFF;
+    public Material black;
+    public GameObject blackButton;
+
+    public Sprite purpleON;
+    public Sprite purpleOFF;
+    public Material purple;
+    public GameObject purpleButton;
+
+    public Sprite redON;
+    public Sprite redOFF;
+    public Material red;
+    public GameObject redButton;
+
+    public Sprite blueON;
+    public Sprite blueOFF;
+    public Material blue;
+    public GameObject blueButton;
+
+    public Sprite yellowON;
+    public Sprite yellowOFF;
+    public Material yellow;
+    public GameObject yellowButton;
+
+    public Sprite greenON;
+    public Sprite greenOFF;
+    public Material green;
+    public GameObject greenButton;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        blackButton.GetComponent<Image>().sprite = blackON;
+        Brush.GetComponent<MeshRenderer>().material = black;
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void blackButtonPress()
+    {
+        Brush.GetComponent<MeshRenderer>().material = black;
+
+        blackButton.GetComponent<Image>().sprite = blackON;
+        redButton.GetComponent<Image>().sprite = redOFF;
+        purpleButton.GetComponent<Image>().sprite = purpleOFF;
+        greenButton.GetComponent<Image>().sprite = greenOFF;
+        yellowButton.GetComponent<Image>().sprite = yellowOFF;
+        blueButton.GetComponent<Image>().sprite = blueOFF;
+    }
+
+    public void redButtonPress()
+    {
+        Brush.GetComponent<MeshRenderer>().material = red;
+
+        blackButton.GetComponent<Image>().sprite = blackOFF;
+        redButton.GetComponent<Image>().sprite = redON;
+        purpleButton.GetComponent<Image>().sprite = purpleOFF;
+        greenButton.GetComponent<Image>().sprite = greenOFF;
+        yellowButton.GetComponent<Image>().sprite = yellowOFF;
+        blueButton.GetComponent<Image>().sprite = blueOFF;
+    }
+
+    public void purpleButtonPress()
+    {
+        Brush.GetComponent<MeshRenderer>().material = purple;
+
+        blackButton.GetComponent<Image>().sprite = blackOFF;
+        redButton.GetComponent<Image>().sprite = redOFF;
+        purpleButton.GetComponent<Image>().sprite = purpleON;
+        greenButton.GetComponent<Image>().sprite = greenOFF;
+        yellowButton.GetComponent<Image>().sprite = yellowOFF;
+        blueButton.GetComponent<Image>().sprite = blueOFF;
+    }
+
+    public void greenButtonPress()
+    {
+        Brush.GetComponent<MeshRenderer>().material = green;
+
+        blackButton.GetComponent<Image>().sprite = blackOFF;
+        redButton.GetComponent<Image>().sprite = redOFF;
+        purpleButton.GetComponent<Image>().sprite = purpleOFF;
+        greenButton.GetComponent<Image>().sprite = greenON;
+        yellowButton.GetComponent<Image>().sprite = yellowOFF;
+        blueButton.GetComponent<Image>().sprite = blueOFF;
+    }
+
+    public void blueButtonPress()
+    {
+        Brush.GetComponent<MeshRenderer>().material = blue;
+
+        blackButton.GetComponent<Image>().sprite = blackOFF;
+        redButton.GetComponent<Image>().sprite = redOFF;
+        purpleButton.GetComponent<Image>().sprite = purpleOFF;
+        greenButton.GetComponent<Image>().sprite = greenOFF;
+        yellowButton.GetComponent<Image>().sprite = yellowOFF;
+        blueButton.GetComponent<Image>().sprite = blueON;
+    }
+
+    public void yellowButtonPress()
+    {
+        Brush.GetComponent<MeshRenderer>().material = yellow;
+
+        blackButton.GetComponent<Image>().sprite = blackOFF;
+        redButton.GetComponent<Image>().sprite = redOFF;
+        purpleButton.GetComponent<Image>().sprite = purpleOFF;
+        greenButton.GetComponent<Image>().sprite = greenOFF;
+        yellowButton.GetComponent<Image>().sprite = yellowON;
+        blueButton.GetComponent<Image>().sprite = blueOFF;
+    }
+
+}
