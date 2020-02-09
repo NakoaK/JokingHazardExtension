@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class colorChange : MonoBehaviour
 {
     public GameObject Brush;
+    public Material PaintCanvasMat;
 
     public Sprite blackON;
     public Sprite blackOFF;
@@ -37,6 +39,14 @@ public class colorChange : MonoBehaviour
     public Material green;
     public GameObject greenButton;
 
+    public Sprite eraserON;
+    public Sprite eraserOFF; 
+    public Material erase;
+    public GameObject eraserButton;
+
+    public bool eraseBool = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +71,10 @@ public class colorChange : MonoBehaviour
         greenButton.GetComponent<Image>().sprite = greenOFF;
         yellowButton.GetComponent<Image>().sprite = yellowOFF;
         blueButton.GetComponent<Image>().sprite = blueOFF;
+        eraserButton.GetComponent<Image>().sprite = eraserOFF;
+
+        eraseBool = false;
+
     }
 
     public void redButtonPress()
@@ -73,6 +87,10 @@ public class colorChange : MonoBehaviour
         greenButton.GetComponent<Image>().sprite = greenOFF;
         yellowButton.GetComponent<Image>().sprite = yellowOFF;
         blueButton.GetComponent<Image>().sprite = blueOFF;
+        eraserButton.GetComponent<Image>().sprite = eraserOFF;
+
+        eraseBool = false;
+
     }
 
     public void purpleButtonPress()
@@ -85,6 +103,10 @@ public class colorChange : MonoBehaviour
         greenButton.GetComponent<Image>().sprite = greenOFF;
         yellowButton.GetComponent<Image>().sprite = yellowOFF;
         blueButton.GetComponent<Image>().sprite = blueOFF;
+        eraserButton.GetComponent<Image>().sprite = eraserOFF;
+
+        eraseBool = false;
+
     }
 
     public void greenButtonPress()
@@ -97,6 +119,10 @@ public class colorChange : MonoBehaviour
         greenButton.GetComponent<Image>().sprite = greenON;
         yellowButton.GetComponent<Image>().sprite = yellowOFF;
         blueButton.GetComponent<Image>().sprite = blueOFF;
+        eraserButton.GetComponent<Image>().sprite = eraserOFF;
+
+        eraseBool = false;
+
     }
 
     public void blueButtonPress()
@@ -109,6 +135,10 @@ public class colorChange : MonoBehaviour
         greenButton.GetComponent<Image>().sprite = greenOFF;
         yellowButton.GetComponent<Image>().sprite = yellowOFF;
         blueButton.GetComponent<Image>().sprite = blueON;
+        eraserButton.GetComponent<Image>().sprite = eraserOFF;
+
+        eraseBool = false;
+
     }
 
     public void yellowButtonPress()
@@ -121,6 +151,41 @@ public class colorChange : MonoBehaviour
         greenButton.GetComponent<Image>().sprite = greenOFF;
         yellowButton.GetComponent<Image>().sprite = yellowON;
         blueButton.GetComponent<Image>().sprite = blueOFF;
+        eraserButton.GetComponent<Image>().sprite = eraserOFF;
+
+        eraseBool = false;
+
+
+    }
+
+    public void eraserButtonPress()
+    {
+        //Brush.GetComponent<MeshRenderer>().material = erase;
+
+        eraseBool = true;
+
+        Brush.GetComponent<MeshRenderer>().material = PaintCanvasMat;
+
+
+        blackButton.GetComponent<Image>().sprite = blackOFF;
+        redButton.GetComponent<Image>().sprite = redOFF;
+        purpleButton.GetComponent<Image>().sprite = purpleOFF;
+        greenButton.GetComponent<Image>().sprite = greenOFF;
+        yellowButton.GetComponent<Image>().sprite = yellowOFF;
+        blueButton.GetComponent<Image>().sprite = blueOFF;
+        eraserButton.GetComponent<Image>().sprite = eraserON;
+
+    }
+
+    public void bombButtonPress()
+    {
+      SceneManager.LoadScene("EditorScene"); //restart
+    }
+
+    public void OnMouseDown()
+    {
+        if (eraseBool)
+            Object.Destroy(Brush);
     }
 
 }
