@@ -5,10 +5,20 @@ using UnityEngine;
 public class SpawnStickers : MonoBehaviour
 {
     public GameObject prefab;
-    void Update()
+    SpriteRenderer spriteRenderer;
+
+    void Start()
     {
-        Instantiate(prefab, Vector3.up, Quaternion.identity);
-        
+        spriteRenderer = prefab.gameObject.GetComponent<SpriteRenderer>(); //get sprite renderer & store it
+    }
+
+    public void buttonPress()
+    { 
+        Instantiate(prefab, Vector3.forward, Quaternion.identity); 
+    }
+    public void change(Sprite differentSprite)
+    {
+        spriteRenderer.sprite = differentSprite; //sets sprite renderers sprite
     }
 
 }
