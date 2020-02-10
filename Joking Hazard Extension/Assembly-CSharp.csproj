@@ -55,6 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FreeDraw\Scripts\Drawable.cs" />
+     <Compile Include="Assets\FreeDraw\Scripts\DrawingSettings.cs" />
      <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanCircuit.cs" />
      <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanDocumentation.cs" />
      <Compile Include="Assets\Lean\Common\Examples\Scripts\LeanLinkTo.cs" />
@@ -98,6 +100,7 @@
      <Compile Include="Assets\Scripts\Mute.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Sticker Movement\DoubleClick.cs" />
+     <Compile Include="Assets\Scripts\Sticker Movement\Rotate.cs" />
      <Compile Include="Assets\Scripts\colorChange.cs" />
      <Compile Include="Assets\Scripts\musicSingleton.cs" />
      <Compile Include="Assets\Scripts\paintable.cs" />
