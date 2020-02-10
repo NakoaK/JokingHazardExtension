@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 881, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
   vertical: 0
-  controlID: 127
+  controlID: 86
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 128
+  controlID: 87
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 129
+  controlID: 88
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -364,11 +364,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Stickers
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/Stickers
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\eae-gappintern\Documents\GitHub\JokingHazardExtension\Joking
     Hazard Extension
@@ -376,9 +376,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 75}
-    m_SelectedIDs: f8350000
-    m_LastClickedID: 13816
-    m_ExpandedIDs: 00000000e0350000e2350000e4350000e6350000e8350000ea350000ec35000000ca9a3b
+    m_SelectedIDs: dc350000
+    m_LastClickedID: 13788
+    m_ExpandedIDs: 00000000dc350000de350000e0350000e2350000e4350000e6350000e835000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -406,7 +406,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0350000e2350000e4350000e6350000e8350000ea350000ec350000
+    m_ExpandedIDs: 00000000dc350000de350000e0350000e2350000e4350000e6350000e8350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -434,7 +434,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000925200005838000000000000bc4800009e350000b0350000
+    m_ExpandedInstanceIDs: c6230000925200005838000000000000bc4800009e350000b0350000ec370000f4370000f8370000003800000c38000010380000f037000004380000ac3500001438000008380000fc370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -529,23 +529,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c8dbffff
-      m_LastClickedID: 0
-      m_ExpandedIDs: 6efbffff78350000
+      m_SelectedIDs: 763f0000
+      m_LastClickedID: 16246
+      m_ExpandedIDs: a2f8ffff66f9ffff82f9ffffd6f9ffffaefaffff6efbffff7c38000088380000ba380000d63800004a39000094390000183e00009c3f0000a83f0000da3f0000f63f000052400000b4400000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Spawner
-        m_OriginalName: Spawner
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 13646
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -591,9 +591,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.56376004, y: -0.23811777, z: 117.18555}
+    m_Target: {x: 0.08326797, y: -12.860369, z: 142.96492}
     speed: 2
-    m_Value: {x: -0.56376004, y: -0.23811777, z: 117.18555}
+    m_Value: {x: 0.08326797, y: -12.860369, z: 142.96492}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -643,9 +643,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 22
+    m_Target: 42.23239
     speed: 2
-    m_Value: 22
+    m_Value: 42.23239
   m_Ortho:
     m_Target: 1
     speed: 2
