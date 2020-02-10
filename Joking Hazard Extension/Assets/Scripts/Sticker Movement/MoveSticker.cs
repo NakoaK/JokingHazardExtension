@@ -39,7 +39,8 @@ public class MoveSticker : MonoBehaviour
         }
         if(canRotate == true)
         {
-;            transform.Rotate(0, 0, 90 * Time.deltaTime);
+
+            transform.Rotate(0, 0, Input.GetAxis("Mouse X") * 8);
         }
     }
 

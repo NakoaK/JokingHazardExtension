@@ -108,6 +108,8 @@
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Sticker Movement\DoubleClick.cs" />
     <Compile Include="Assets\Scripts\Sticker Movement\MoveSticker.cs" />
+    <Compile Include="Assets\Scripts\Sticker Movement\SpawnStickers.cs" />
+    <Compile Include="Assets\Scripts\Sticker Movement\SpriteChanger.cs" />
     <Compile Include="Assets\Scripts\colorChange.cs" />
     <Compile Include="Assets\Scripts\musicSingleton.cs" />
     <Compile Include="Assets\Scripts\paintable.cs" />
