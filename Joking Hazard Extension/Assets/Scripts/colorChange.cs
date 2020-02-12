@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using FreeDraw;
 
 public class colorChange : MonoBehaviour
 {
@@ -46,6 +47,8 @@ public class colorChange : MonoBehaviour
 
     public bool eraseBool = false;
 
+    public string Colour;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +56,8 @@ public class colorChange : MonoBehaviour
         blackButton.GetComponent<Image>().sprite = blackON;
         Brush.GetComponent<MeshRenderer>().material = black;
 
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetMarkerBlack();
     }
 
     // Update is called once per frame
@@ -64,6 +69,9 @@ public class colorChange : MonoBehaviour
     public void blackButtonPress()
     {
         Brush.GetComponent<MeshRenderer>().material = black;
+
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetMarkerBlack();
 
         blackButton.GetComponent<Image>().sprite = blackON;
         redButton.GetComponent<Image>().sprite = redOFF;
@@ -81,6 +89,9 @@ public class colorChange : MonoBehaviour
     {
         Brush.GetComponent<MeshRenderer>().material = red;
 
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetMarkerRed();
+
         blackButton.GetComponent<Image>().sprite = blackOFF;
         redButton.GetComponent<Image>().sprite = redON;
         purpleButton.GetComponent<Image>().sprite = purpleOFF;
@@ -97,6 +108,9 @@ public class colorChange : MonoBehaviour
     {
         Brush.GetComponent<MeshRenderer>().material = purple;
 
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetMarkerPurple();
+
         blackButton.GetComponent<Image>().sprite = blackOFF;
         redButton.GetComponent<Image>().sprite = redOFF;
         purpleButton.GetComponent<Image>().sprite = purpleON;
@@ -111,7 +125,10 @@ public class colorChange : MonoBehaviour
 
     public void greenButtonPress()
     {
-        Brush.GetComponent<MeshRenderer>().material = green;
+         Brush.GetComponent<MeshRenderer>().material = green;
+
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetMarkerGreen();
 
         blackButton.GetComponent<Image>().sprite = blackOFF;
         redButton.GetComponent<Image>().sprite = redOFF;
@@ -129,6 +146,9 @@ public class colorChange : MonoBehaviour
     {
         Brush.GetComponent<MeshRenderer>().material = blue;
 
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetMarkerBlue();
+
         blackButton.GetComponent<Image>().sprite = blackOFF;
         redButton.GetComponent<Image>().sprite = redOFF;
         purpleButton.GetComponent<Image>().sprite = purpleOFF;
@@ -145,6 +165,9 @@ public class colorChange : MonoBehaviour
     {
         Brush.GetComponent<MeshRenderer>().material = yellow;
 
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetMarkerYellow();
+
         blackButton.GetComponent<Image>().sprite = blackOFF;
         redButton.GetComponent<Image>().sprite = redOFF;
         purpleButton.GetComponent<Image>().sprite = purpleOFF;
@@ -160,11 +183,14 @@ public class colorChange : MonoBehaviour
 
     public void eraserButtonPress()
     {
-        //Brush.GetComponent<MeshRenderer>().material = erase;
+        Brush.GetComponent<MeshRenderer>().material = erase;
 
         eraseBool = true;
 
-        Brush.GetComponent<MeshRenderer>().material = PaintCanvasMat;
+        //Brush.GetComponent<MeshRenderer>().material = PaintCanvasMat;
+
+        DrawingSettings brushColor = new DrawingSettings();
+        brushColor.SetEraser();
 
 
         blackButton.GetComponent<Image>().sprite = blackOFF;

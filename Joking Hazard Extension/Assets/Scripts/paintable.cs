@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FreeDraw;
 
 public class paintable : MonoBehaviour
 {
@@ -60,8 +61,12 @@ public class paintable : MonoBehaviour
 
     public void updatebrushSize()
     {
+        DrawingSettings updateSize = new DrawingSettings();
+        updateSize.UpdateBrushSize();
+
         brushSizeSliderValue = GameObject.Find("BrushSlider").GetComponent<Slider>().value;
-        brushSizeSliderValue = (brushSizeSliderValue / 10) + .05f;
+        brushSizeSliderValue = brushSizeSliderValue / 20;
         brushSize = brushSizeSliderValue;
+
     }
 }

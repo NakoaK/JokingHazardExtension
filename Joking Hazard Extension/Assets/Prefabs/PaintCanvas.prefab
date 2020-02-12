@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7559690941232771831}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0, z: -22.04}
-  m_LocalScale: {x: 2.211404, y: 1, z: 3.436692}
+  m_LocalScale: {x: 2.211404, y: 1, z: 3.4366944}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -107,5 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99042b48260d12247be9ff84dd043e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brush: {fileID: 7962570883901107981, guid: 18fc298dfc6f6a744b9c1ff006a829cb, type: 3}
+  brush: {fileID: 0}
   brushSize: 0.1
+  canPaint: 0
+  paintIcon: {fileID: 0}
+  stickerIcon: {fileID: 0}
+  paintIconON: {fileID: 21300000, guid: bad12258d95c00c4a809f966c56d42ef, type: 3}
+  paintIconOFF: {fileID: 21300000, guid: facc07d779b0e3d49a9d6f24fdb4cc72, type: 3}
+  stickerIconON: {fileID: 21300000, guid: 66cf09ea575c53842b971312518ffb4a, type: 3}
+  stickerIconOFF: {fileID: 21300000, guid: d26711f0e4d527544b2c872ff5606d71, type: 3}

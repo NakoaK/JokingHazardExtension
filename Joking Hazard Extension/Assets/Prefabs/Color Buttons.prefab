@@ -118,7 +118,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1184762223832718008}
-        m_MethodName: eraserButtonPress
+        m_MethodName: bombButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -307,7 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf48a6c9cc9baa248a604a0210d8f72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Brush: {fileID: 7962570883901107981, guid: 18fc298dfc6f6a744b9c1ff006a829cb, type: 3}
+  Brush: {fileID: 0}
+  PaintCanvasMat: {fileID: 2100000, guid: 0b0110a02d3cee1478cd52864e6bfc02, type: 2}
   blackON: {fileID: 21300000, guid: 8f3f2f5ac92c8b443922d2bc5235d618, type: 3}
   blackOFF: {fileID: 21300000, guid: b71b7815c4e506945b97a6c7853f29e0, type: 3}
   black: {fileID: 2100000, guid: 3ce78aad317e48941ae5c6628373aa30, type: 2}
@@ -336,6 +337,8 @@ MonoBehaviour:
   eraserOFF: {fileID: 21300000, guid: da17548dd4ed00e44b59366cfa582c52, type: 3}
   erase: {fileID: 2100000, guid: f2bdfc45702ec02478b1efdee7ed1c0f, type: 2}
   eraserButton: {fileID: 1778914311}
+  eraseBool: 0
+  Colour: 
 --- !u!1 &3944714141472357013
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +974,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11500000, guid: 03510ea897333a3478c3615be62b832e, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
