@@ -15,6 +15,7 @@ namespace FreeDraw
         public float Transparency = 1f;
         public int brushSizeSliderValue;
         public int tempSize;
+        //public bool canDraw = true;
 
         // Changing pen settings is easy as changing the static properties Drawable.Pen_Colour and Drawable.Pen_Width
         public void SetMarkerColour(Color new_color)
@@ -64,7 +65,7 @@ namespace FreeDraw
         }
         public void SetMarkerPurple()
         {
-            Color c = new Color(73, 31, 73);
+            Color c = new Color(73, 31, 73, 255);
             c.a = Transparency;
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
@@ -87,12 +88,14 @@ namespace FreeDraw
         {
             Color c = Color.white;
             SetMarkerColour(c);
+            Drawable.drawable.SetPenBrush();
         }
 
         public void PartialSetEraser()
         {
             Color c = Color.white;
             SetMarkerColour(c);
+            Drawable.drawable.SetPenBrush();
         }
 
         public void UpdateBrushSize()
@@ -100,6 +103,8 @@ namespace FreeDraw
             brushSizeSliderValue = (int) GameObject.Find("BrushSlider").GetComponent<Slider>().value;
             Drawable.Pen_Width = brushSizeSliderValue;
         }
+
+        
 
     }
 }

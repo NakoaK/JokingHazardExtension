@@ -43,6 +43,8 @@ namespace FreeDraw
         bool mouse_was_previously_held_down = false;
         bool no_drawing_on_current_drag = false;
 
+        private bool canDraw = true;
+
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -99,24 +101,27 @@ namespace FreeDraw
         // Changes the surrounding pixels of the world_point to the static pen_colour
         public void PenBrush(Vector2 world_point)
         {
-            Vector2 pixel_pos = WorldToPixelCoordinates(world_point);
+            
+                Vector2 pixel_pos = WorldToPixelCoordinates(world_point);
 
-            cur_colors = drawable_texture.GetPixels32();
+                cur_colors = drawable_texture.GetPixels32();
 
-            if (previous_drag_position == Vector2.zero)
-            {
-                // If this is the first time we've ever dragged on this image, simply colour the pixels at our mouse position
-                MarkPixelsToColour(pixel_pos, Pen_Width, Pen_Colour);
-            }
-            else
-            {
-                // Colour in a line from where we were on the last update call
-                ColourBetween(previous_drag_position, pixel_pos, Pen_Width, Pen_Colour);
-            }
-            ApplyMarkedPixelChanges();
+                if (previous_drag_position == Vector2.zero)
+                {
+                    // If this is the first time we've ever dragged on this image, simply colour the pixels at our mouse position
+                    MarkPixelsToColour(pixel_pos, Pen_Width, Pen_Colour);
+                }
+                else
+                {
+                    // Colour in a line from where we were on the last update call
+                    ColourBetween(previous_drag_position, pixel_pos, Pen_Width, Pen_Colour);
+                }
+                ApplyMarkedPixelChanges();
 
-            //Debug.Log("Dimensions: " + pixelWidth + "," + pixelHeight + ". Units to pixels: " + unitsToPixels + ". Pixel pos: " + pixel_pos);
-            previous_drag_position = pixel_pos;
+                //Debug.Log("Dimensions: " + pixelWidth + "," + pixelHeight + ". Units to pixels: " + unitsToPixels + ". Pixel pos: " + pixel_pos);
+                previous_drag_position = pixel_pos;
+            
+            
         }
 
 
@@ -138,41 +143,71 @@ namespace FreeDraw
         // Detects when user is left clicking, which then call the appropriate function
         void Update()
         {
-            // Is the user holding down the left mouse button?
             bool mouse_held_down = Input.GetMouseButton(0);
-            if (mouse_held_down && !no_drawing_on_current_drag)
+
+
+            // Is the user holding down the left mouse button?
+
+            if (canDraw)
             {
-                // Convert mouse coordinates to world coordinates
-                Vector2 mouse_world_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                // Check if the current mouse position overlaps our image
-                Collider2D hit = Physics2D.OverlapPoint(mouse_world_position, Drawing_Layers.value);
-                if (hit != null && hit.transform != null)
+                //print(canDraw);
+                if (mouse_held_down && !no_drawing_on_current_drag)
                 {
-                    // We're over the texture we're drawing on!
-                    // Use whatever function the current brush is
-                    current_brush(mouse_world_position);
-                }
+                    // Convert mouse coordinates to world coordinates
+                    Vector2 mouse_world_position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-                else
-                {
-                    // We're not over our destination texture
-                    previous_drag_position = Vector2.zero;
-                    if (!mouse_was_previously_held_down)
+                    // Check if the current mouse position overlaps our image
+                    Collider2D hit = Physics2D.OverlapPoint(mouse_world_position, Drawing_Layers.value);
+                    if (hit != null && hit.transform != null)
                     {
-                        // This is a new drag where the user is left clicking off the canvas
-                        // Ensure no drawing happens until a new drag is started
-                        no_drawing_on_current_drag = true;
+                        // We're over the texture we're drawing on!
+                        // Use whatever function the current brush is
+
+                        current_brush(mouse_world_position);
+                    }
+
+                    else
+                    {
+                        // We're not over our destination texture
+                        previous_drag_position = Vector2.zero;
+                        if (!mouse_was_previously_held_down)
+                        {
+                            // This is a new drag where the user is left clicking off the canvas
+                            // Ensure no drawing happens until a new drag is started
+                            no_drawing_on_current_drag = true;
+                        }
                     }
                 }
+
+
+                // Mouse is released
+                else if (!mouse_held_down)
+                {
+                    previous_drag_position = Vector2.zero;
+                    no_drawing_on_current_drag = false;
+                }
+                mouse_was_previously_held_down = mouse_held_down;
+
             }
-            // Mouse is released
-            else if (!mouse_held_down)
+            else
             {
-                previous_drag_position = Vector2.zero;
-                no_drawing_on_current_drag = false;
+                canDraw = false;
             }
-            mouse_was_previously_held_down = mouse_held_down;
+           
+            
+        }
+
+        public void noDraw()
+        {
+            canDraw = false;
+            print("paint mode is " + canDraw);
+
+        }
+
+        public void yesDraw()
+        {
+            canDraw = true;
+            print("paint mode is " + canDraw);
         }
 
 
@@ -307,5 +342,7 @@ namespace FreeDraw
             if (Reset_Canvas_On_Play)
                 ResetCanvas();
         }
+
+        
     }
 }

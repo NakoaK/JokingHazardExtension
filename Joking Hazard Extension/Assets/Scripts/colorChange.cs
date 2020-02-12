@@ -45,9 +45,8 @@ public class colorChange : MonoBehaviour
     public Material erase;
     public GameObject eraserButton;
 
-    public bool eraseBool = false;
+    //public bool eraseBool = false;
 
-    public string Colour;
 
 
     // Start is called before the first frame update
@@ -81,13 +80,13 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-        eraseBool = false;
+        //eraseBool = false;
 
     }
 
     public void redButtonPress()
     {
-        Brush.GetComponent<MeshRenderer>().material = red;
+       Brush.GetComponent<MeshRenderer>().material = red;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerRed();
@@ -100,7 +99,7 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-        eraseBool = false;
+       // eraseBool = false;
 
     }
 
@@ -119,7 +118,7 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-        eraseBool = false;
+       // eraseBool = false;
 
     }
 
@@ -138,7 +137,7 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-        eraseBool = false;
+        //eraseBool = false;
 
     }
 
@@ -157,13 +156,11 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueON;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-        eraseBool = false;
-
     }
 
     public void yellowButtonPress()
     {
-        Brush.GetComponent<MeshRenderer>().material = yellow;
+       Brush.GetComponent<MeshRenderer>().material = yellow;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerYellow();
@@ -176,16 +173,14 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-        eraseBool = false;
-
-
+        
     }
 
     public void eraserButtonPress()
     {
         Brush.GetComponent<MeshRenderer>().material = erase;
 
-        eraseBool = true;
+        //eraseBool = true;
 
         //Brush.GetComponent<MeshRenderer>().material = PaintCanvasMat;
 
@@ -208,10 +203,10 @@ public class colorChange : MonoBehaviour
       SceneManager.LoadScene("EditorScene"); //restart
     }
 
-    public void OnMouseDown()
-    {
-        if (eraseBool)
-            Object.Destroy(Brush);
-    }
+    //public void OnMouseDown()
+    //{
+    //    if (eraseBool)
+    //        Object.Destroy(Brush);
+    //}
 
 }

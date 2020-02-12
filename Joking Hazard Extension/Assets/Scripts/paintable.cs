@@ -21,11 +21,14 @@ public class paintable : MonoBehaviour
 
     private float brushSizeSliderValue;
 
+    Drawable onPaint = new Drawable();
+
 
     // Start is called before the first frame update
     void Start()
     {
         canPaint = true;
+        
     }
 
     // Update is called once per frame
@@ -35,9 +38,9 @@ public class paintable : MonoBehaviour
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit paint;
-            if(Physics.Raycast(ray, out paint))
+            if (Physics.Raycast(ray, out paint))
             {
-                var go = Instantiate(brush, paint.point + Vector3.back * 0.1f, Quaternion.Euler(-90,0,0), transform);
+                var go = Instantiate(brush, paint.point + Vector3.back * 0.1f, Quaternion.Euler(-90, 0, 0), transform);
                 go.transform.localScale = Vector3.one * brushSize;
             }
         }
@@ -48,6 +51,8 @@ public class paintable : MonoBehaviour
     public void stickerMode()
     {
         canPaint = false;
+
+        onPaint.noDraw();
         stickerIcon.GetComponent<Image>().sprite = stickerIconON;
         paintIcon.GetComponent<Image>().sprite = paintIconOFF;
     }
@@ -55,6 +60,8 @@ public class paintable : MonoBehaviour
     public void paintMode()
     {
         canPaint = true;
+
+        onPaint.yesDraw();
         paintIcon.GetComponent<Image>().sprite = paintIconON;
         stickerIcon.GetComponent<Image>().sprite = stickerIconOFF;
     }
