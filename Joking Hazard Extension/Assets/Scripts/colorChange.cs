@@ -8,42 +8,44 @@ using FreeDraw;
 public class colorChange : MonoBehaviour
 {
     public GameObject Brush;
-    public Material PaintCanvasMat;
+    //public Material PaintCanvasMat;
 
     public Sprite blackON;
     public Sprite blackOFF;
-    public Material black;
+    //public Material black;
     public GameObject blackButton;
 
     public Sprite purpleON;
     public Sprite purpleOFF;
-    public Material purple;
+    //public Material purple;
     public GameObject purpleButton;
 
     public Sprite redON;
     public Sprite redOFF;
-    public Material red;
+    //public Material red;
     public GameObject redButton;
 
     public Sprite blueON;
     public Sprite blueOFF;
-    public Material blue;
+    //public Material blue;
     public GameObject blueButton;
 
     public Sprite yellowON;
     public Sprite yellowOFF;
-    public Material yellow;
+    //public Material yellow;
     public GameObject yellowButton;
 
     public Sprite greenON;
     public Sprite greenOFF;
-    public Material green;
+   // public Material green;
     public GameObject greenButton;
 
     public Sprite eraserON;
     public Sprite eraserOFF; 
-    public Material erase;
+    //public Material erase;
     public GameObject eraserButton;
+
+    public Drawable reset;
 
     //public bool eraseBool = false;
 
@@ -53,7 +55,7 @@ public class colorChange : MonoBehaviour
     void Start()
     {
         blackButton.GetComponent<Image>().sprite = blackON;
-        Brush.GetComponent<MeshRenderer>().material = black;
+        //Brush.GetComponent<MeshRenderer>().material = black;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerBlack();
@@ -67,7 +69,7 @@ public class colorChange : MonoBehaviour
 
     public void blackButtonPress()
     {
-        Brush.GetComponent<MeshRenderer>().material = black;
+        //Brush.GetComponent<MeshRenderer>().material = black;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerBlack();
@@ -86,7 +88,7 @@ public class colorChange : MonoBehaviour
 
     public void redButtonPress()
     {
-       Brush.GetComponent<MeshRenderer>().material = red;
+       //Brush.GetComponent<MeshRenderer>().material = red;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerRed();
@@ -105,7 +107,7 @@ public class colorChange : MonoBehaviour
 
     public void purpleButtonPress()
     {
-        Brush.GetComponent<MeshRenderer>().material = purple;
+        //Brush.GetComponent<MeshRenderer>().material = purple;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerPurple();
@@ -124,7 +126,7 @@ public class colorChange : MonoBehaviour
 
     public void greenButtonPress()
     {
-         Brush.GetComponent<MeshRenderer>().material = green;
+         //Brush.GetComponent<MeshRenderer>().material = green;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerGreen();
@@ -143,7 +145,7 @@ public class colorChange : MonoBehaviour
 
     public void blueButtonPress()
     {
-        Brush.GetComponent<MeshRenderer>().material = blue;
+        //Brush.GetComponent<MeshRenderer>().material = blue;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerBlue();
@@ -160,7 +162,7 @@ public class colorChange : MonoBehaviour
 
     public void yellowButtonPress()
     {
-       Brush.GetComponent<MeshRenderer>().material = yellow;
+       //Brush.GetComponent<MeshRenderer>().material = yellow;
 
         DrawingSettings brushColor = new DrawingSettings();
         brushColor.SetMarkerYellow();
@@ -178,7 +180,7 @@ public class colorChange : MonoBehaviour
 
     public void eraserButtonPress()
     {
-        Brush.GetComponent<MeshRenderer>().material = erase;
+        //Brush.GetComponent<MeshRenderer>().material = erase;
 
         //eraseBool = true;
 
@@ -200,7 +202,8 @@ public class colorChange : MonoBehaviour
 
     public void bombButtonPress()
     {
-      SceneManager.LoadScene("EditorScene"); //restart
+        reset.ResetCanvas();
+        //SceneManager.LoadScene("EditorScene"); //restart
     }
 
     //public void OnMouseDown()
