@@ -65,7 +65,7 @@ namespace FreeDraw
         }
         public void SetMarkerPurple()
         {
-            Color c = new Color(73, 31, 73, 255);
+            Color c = new Color32(127, 0, 255, 1);
             c.a = Transparency;
             SetMarkerColour(c);
             Drawable.drawable.SetPenBrush();
