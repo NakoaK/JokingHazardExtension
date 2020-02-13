@@ -22,6 +22,7 @@ public class paintable : MonoBehaviour
     private float brushSizeSliderValue;
 
     public Drawable onPaint; //= new Drawable();
+    public MoveSticker movement;
 
 
     // Start is called before the first frame update
@@ -53,7 +54,8 @@ public class paintable : MonoBehaviour
         canPaint = false;
 
         onPaint.NoDraw();
-       // onPaint.canDraw = false;
+        movement.YesFuck();
+        // onPaint.canDraw = false;
         stickerIcon.GetComponent<Image>().sprite = stickerIconON;
         paintIcon.GetComponent<Image>().sprite = paintIconOFF;
     }
@@ -63,6 +65,7 @@ public class paintable : MonoBehaviour
         canPaint = true;
 
         onPaint.YesDraw();
+        movement.NoFuck();
         //onPaint.canDraw = true;
         paintIcon.GetComponent<Image>().sprite = paintIconON;
         stickerIcon.GetComponent<Image>().sprite = stickerIconOFF;

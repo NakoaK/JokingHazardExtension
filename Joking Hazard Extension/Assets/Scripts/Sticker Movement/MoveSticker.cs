@@ -9,43 +9,48 @@ public class MoveSticker : MonoBehaviour
     public bool isBeingHeld = false;
     public bool canScale = false;
     public bool canRotate = false;
+    public bool canFuckWith = true;
     Vector3 temp;
 
     void Update()
     {
-        if(isBeingHeld == true)
+        if (canFuckWith)
         {
-            Vector3 mousePos;
-            mousePos = Input.mousePosition;
-            mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-            this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, 0);
-        }
-        if(canScale == true)
-        {
-            temp = transform.localScale;
-
-            temp.x += Input.GetAxis("Mouse X");
-            //temp.y += Input.GetAxis("Mouse Y");
-            if (temp.x > 0)
+            if (isBeingHeld == true)
             {
-                temp.y = temp.x;
-            }
-            else
-            {
-                temp.y = temp.x * -1;
-            }
-            transform.localScale = temp;
-        }
-        if(canRotate == true)
-        {
+                Vector3 mousePos;
+                mousePos = Input.mousePosition;
+                mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-            transform.Rotate(0, 0, Input.GetAxis("Mouse X") * 8);
+                this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, 95);
+            }
+            if (canScale == true)
+            {
+                temp = transform.localScale;
+
+                temp.x += Input.GetAxis("Mouse X");
+                //temp.y += Input.GetAxis("Mouse Y");
+                if (temp.x > 0)
+                {
+                    temp.y = temp.x;
+                }
+                else
+                {
+                    temp.y = temp.x * -1;
+                }
+                transform.localScale = temp;
+            }
+            if (canRotate == true)
+            {
+
+                transform.Rotate(0, 0, Input.GetAxis("Mouse X") * 8);
+            }
         }
     }
 
     private void OnMouseDown()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             if (Input.GetKey(KeyCode.LeftAlt))
@@ -81,5 +86,17 @@ public class MoveSticker : MonoBehaviour
         isBeingHeld = false;
         canScale = false;
         canRotate = false;
+    }
+    public void NoFuck()
+    {
+        canFuckWith = false;
+        print("No Fuck " + canFuckWith);
+
+    }
+
+    public void YesFuck()
+    {
+        canFuckWith = true;
+        print("Yes Fuck " + canFuckWith);
     }
 }

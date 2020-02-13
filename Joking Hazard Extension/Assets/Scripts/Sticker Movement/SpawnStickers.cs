@@ -14,7 +14,7 @@ public class SpawnStickers : MonoBehaviour
 
     public void buttonPress()
     { 
-        Instantiate(prefab, Vector3.forward, Quaternion.identity); 
+        Instantiate(prefab, new Vector3(0,0, 95), Quaternion.identity); 
     }
     public void change(Sprite differentSprite)
     {
