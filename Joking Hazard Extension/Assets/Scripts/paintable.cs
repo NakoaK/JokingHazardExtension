@@ -34,25 +34,25 @@ public class paintable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && canPaint)
-        {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit paint;
-            if (Physics.Raycast(ray, out paint))
-            {
-                var go = Instantiate(brush, paint.point + Vector3.back * 0.1f, Quaternion.Euler(-90, 0, 0), transform);
-                go.transform.localScale = Vector3.one * brushSize;
-            }
-        }
+        //if (Input.GetMouseButton(0) && canPaint)
+        //{
+        //    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //    RaycastHit paint;
+        //    if (Physics.Raycast(ray, out paint))
+        //    {
+        //        var go = Instantiate(brush, paint.point + Vector3.back * 0.1f, Quaternion.Euler(-90, 0, 0), transform);
+        //        go.transform.localScale = Vector3.one * brushSize;
+        //    }
+        //}
 
-        updatebrushSize();
+        //updatebrushSize();
     }
 
     public void stickerMode()
     {
         canPaint = false;
 
-        onPaint.noDraw();
+        onPaint.NoDraw();
        // onPaint.canDraw = false;
         stickerIcon.GetComponent<Image>().sprite = stickerIconON;
         paintIcon.GetComponent<Image>().sprite = paintIconOFF;
@@ -62,7 +62,7 @@ public class paintable : MonoBehaviour
     {
         canPaint = true;
 
-        onPaint.yesDraw();
+        onPaint.YesDraw();
         //onPaint.canDraw = true;
         paintIcon.GetComponent<Image>().sprite = paintIconON;
         stickerIcon.GetComponent<Image>().sprite = stickerIconOFF;

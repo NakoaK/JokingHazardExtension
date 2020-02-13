@@ -4884,6 +4884,11 @@ PrefabInstance:
       propertyPath: black
       value: 
       objectReference: {fileID: 2100000, guid: 3ce78aad317e48941ae5c6628373aa30, type: 2}
+    - target: {fileID: 1184762223832718008, guid: 4914ba11a4d4e3b40a895c72fa47abea,
+        type: 3}
+      propertyPath: reset
+      value: 
+      objectReference: {fileID: 312315704}
     - target: {fileID: 3944714141143896601, guid: 4914ba11a4d4e3b40a895c72fa47abea,
         type: 3}
       propertyPath: m_LocalPosition.x
