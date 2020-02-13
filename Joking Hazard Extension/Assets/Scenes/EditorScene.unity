@@ -275,6 +275,11 @@ PrefabInstance:
       propertyPath: stickerIcon
       value: 
       objectReference: {fileID: 433450795}
+    - target: {fileID: 6407061148839554690, guid: 95dddd5b44a29ed4c99740f0ee9dc86e,
+        type: 3}
+      propertyPath: onPaint
+      value: 
+      objectReference: {fileID: 312315704}
     - target: {fileID: 7559690941232771831, guid: 95dddd5b44a29ed4c99740f0ee9dc86e,
         type: 3}
       propertyPath: m_Name
@@ -283,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 7559690941232771831, guid: 95dddd5b44a29ed4c99740f0ee9dc86e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dddd5b44a29ed4c99740f0ee9dc86e, type: 3}
@@ -341,7 +346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &312315702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -435,6 +440,7 @@ MonoBehaviour:
     m_Bits: 512
   Reset_Canvas_On_Play: 1
   Reset_Colour: {r: 1, g: 1, b: 1, a: 1}
+  canDraw: 1
 --- !u!4 &312315705
 Transform:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ namespace FreeDraw
         bool mouse_was_previously_held_down = false;
         bool no_drawing_on_current_drag = false;
 
-        private bool canDraw = true;
+        public bool canDraw = true;
 
 
 
@@ -189,10 +189,6 @@ namespace FreeDraw
                 mouse_was_previously_held_down = mouse_held_down;
 
             }
-            else
-            {
-                canDraw = false;
-            }
            
             
         }
@@ -211,7 +207,7 @@ namespace FreeDraw
         }
 
 
-
+    
         // Set the colour of pixels in a straight line from start_point all the way to end_point, to ensure everything inbetween is coloured
         public void ColourBetween(Vector2 start_point, Vector2 end_point, int width, Color color)
         {
