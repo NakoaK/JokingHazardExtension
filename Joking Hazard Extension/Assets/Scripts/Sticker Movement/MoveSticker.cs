@@ -9,13 +9,20 @@ public class MoveSticker : MonoBehaviour
     public bool isBeingHeld = false;
     public bool canScale = false;
     public bool canRotate = false;
-    public bool canFuckWith = true;
+    public static bool canFuckWith = true;
+    public  bool doubleClick = false;
+    public BoxCollider2D boxCollider;
     Vector3 temp;
 
+    void Start()
+    {
+        boxCollider = GetComponent<BoxCollider2D>();
+    }
     void Update()
     {
         if (canFuckWith)
         {
+            boxCollider.enabled = true;
             if (isBeingHeld == true)
             {
                 Vector3 mousePos;
@@ -45,38 +52,49 @@ public class MoveSticker : MonoBehaviour
 
                 transform.Rotate(0, 0, Input.GetAxis("Mouse X") * 8);
             }
+            if(doubleClick == true)
+            {
+                Destroy(gameObject);
+                doubleClick = false;
+            }
+        }
+        else
+        {
+            boxCollider.enabled = false;
         }
     }
 
     private void OnMouseDown()
     {
-
-        if (Input.GetMouseButtonDown(0))
+        if (canFuckWith)
         {
-            if (Input.GetKey(KeyCode.LeftAlt))
+            if (Input.GetMouseButtonDown(0))
             {
-                canScale = true;
-                canRotate = false;
-                isBeingHeld = false;
-            }
-            else if(Input.GetKey(KeyCode.LeftShift))
-            {
-                canRotate = true;
-                canScale = false;
-                isBeingHeld = false;
-            }
-            else
-            {
-                Vector3 mousePos;
-                mousePos = Input.mousePosition;
-                mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+                if (Input.GetKey(KeyCode.LeftAlt))
+                {
+                    canScale = true;
+                    canRotate = false;
+                    isBeingHeld = false;
+                }
+                else if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    canRotate = true;
+                    canScale = false;
+                    isBeingHeld = false;
+                }
+                else
+                {
+                    Vector3 mousePos;
+                    mousePos = Input.mousePosition;
+                    mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-                startPosX = mousePos.x - this.transform.localPosition.x;
-                startPosY = mousePos.y - this.transform.localPosition.y;
+                    startPosX = mousePos.x - this.transform.localPosition.x;
+                    startPosY = mousePos.y - this.transform.localPosition.y;
 
-                isBeingHeld = true;
-                canScale = false;
-                canRotate = false;
+                    isBeingHeld = true;
+                    canScale = false;
+                    canRotate = false;
+                }
             }
         }
     }

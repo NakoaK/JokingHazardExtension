@@ -8,6 +8,8 @@ public class DoubleClick : MonoBehaviour
     private bool coroutineAllowed;
     private int clickCounter;
     private int flip = 180;
+    public MoveSticker kill;
+
     void Start()
     {
         firstClickTime = 0f;
@@ -39,8 +41,7 @@ public class DoubleClick : MonoBehaviour
             if (clickCounter == 2)
             {
                 Debug.Log("Double Click");
-                transform.rotation = Quaternion.Euler(0, flip, 0);
-                flip += 180;
+                kill.doubleClick = true;
                 break;
             }
             yield return new WaitForEndOfFrame();
