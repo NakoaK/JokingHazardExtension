@@ -71,6 +71,14 @@ public class paintable : MonoBehaviour
         stickerIcon.GetComponent<Image>().sprite = stickerIconOFF;
     }
 
+    public void textMode()
+    {
+        canPaint = false;
+
+        onPaint.NoDraw();
+        movement.NoFuck();
+    }
+
     public void updatebrushSize()
     {
         DrawingSettings updateSize = new DrawingSettings();

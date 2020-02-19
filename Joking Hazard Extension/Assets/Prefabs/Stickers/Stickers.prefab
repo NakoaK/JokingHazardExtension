@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9c04b1deac4b46d4d864d4b5d63b3a6d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 986c1abea5d760c43a8acb7cd278dde0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstClickTime: 0
   timeBetweenClicks: 0
-  kill: {fileID: 8272374918042338185}
+  kill: {fileID: 0}
 --- !u!114 &8272374918042338185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +120,10 @@ MonoBehaviour:
   canScale: 0
   canRotate: 0
   doubleClick: 0
-  boxCollider: {fileID: 8272374918042338182}
+  stickers: {fileID: 0}
+  stickerCollider: {fileID: 8272374918042338182}
+  TrashCollider: {fileID: 876193568727598913, guid: fdd6d26e0ba546643a0841fe63bde8ff,
+    type: 3}
 --- !u!61 &8272374918042338182
 BoxCollider2D:
   m_ObjectHideFlags: 0

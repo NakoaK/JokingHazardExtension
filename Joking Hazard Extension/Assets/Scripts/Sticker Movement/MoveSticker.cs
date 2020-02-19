@@ -11,18 +11,23 @@ public class MoveSticker : MonoBehaviour
     public bool canRotate = false;
     public static bool canFuckWith = true;
     public  bool doubleClick = false;
-    public BoxCollider2D boxCollider;
+    public GameObject stickers;
+    public BoxCollider2D stickerCollider;
     Vector3 temp;
+    public BoxCollider2D TrashCollider;
+
 
     void Start()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
+        //boxCollider = GetComponent<BoxCollider2D>();
+        //TrashCollider = GetComponent<BoxCollider2D>();
+        
     }
     void Update()
     {
         if (canFuckWith)
         {
-            boxCollider.enabled = true;
+            stickerCollider.enabled = true;
             if (isBeingHeld == true)
             {
                 Vector3 mousePos;
@@ -52,16 +57,22 @@ public class MoveSticker : MonoBehaviour
 
                 transform.Rotate(0, 0, Input.GetAxis("Mouse X") * 8);
             }
-            //if(doubleClick == true)
-           // {
-           //     Destroy(gameObject);
-           //     doubleClick = false;
-           //s }
+            if(doubleClick == true)
+            {
+                Destroy(gameObject);
+                doubleClick = false;
+            }
         }
         else
         {
-            boxCollider.enabled = false;
+            stickerCollider.enabled = false;
         }
+
+    }
+
+    public void FixedUpdate()
+    {
+        checkToDestroy();
     }
 
     private void OnMouseDown()
@@ -116,5 +127,35 @@ public class MoveSticker : MonoBehaviour
     {
         canFuckWith = true;
         print("Yes Fuck " + canFuckWith);
+    }
+
+
+    private void checkToDestroy()
+    {
+        //if (boxCollider.IsTouching(TrashCollider))
+        //{
+        //    Destroy(gameObject);
+        //    print("destroyed");
+        //}
+        //else
+        //{
+        //    print("did not touch trash");
+        //}
+
+        //print(boxCollider.IsTouching(TrashCollider));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Trash")
+            print("touching");
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+
+        if (!isBeingHeld)
+            Destroy(gameObject);
     }
 }
