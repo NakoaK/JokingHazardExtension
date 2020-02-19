@@ -101,7 +101,7 @@ namespace FreeDraw
         public void UpdateBrushSize()
         {
             brushSizeSliderValue = (int) GameObject.Find("BrushSlider").GetComponent<Slider>().value;
-            Drawable.Pen_Width = brushSizeSliderValue;
+            Drawable.Pen_Width = (brushSizeSliderValue*4) + 1;
         }
 
         

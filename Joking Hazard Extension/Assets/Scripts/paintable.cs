@@ -76,9 +76,9 @@ public class paintable : MonoBehaviour
         DrawingSettings updateSize = new DrawingSettings();
         updateSize.UpdateBrushSize();
 
-        brushSizeSliderValue = GameObject.Find("BrushSlider").GetComponent<Slider>().value;
-        brushSizeSliderValue = brushSizeSliderValue / 20;
-        brushSize = brushSizeSliderValue;
+        //brushSizeSliderValue = GameObject.Find("BrushSlider").GetComponent<Slider>().value;
+       // brushSizeSliderValue = brushSizeSliderValue / 20;
+       // brushSize = brushSizeSliderValue;
 
     }
 }
