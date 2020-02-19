@@ -52,11 +52,11 @@ public class MoveSticker : MonoBehaviour
 
                 transform.Rotate(0, 0, Input.GetAxis("Mouse X") * 8);
             }
-            if(doubleClick == true)
-            {
-                Destroy(gameObject);
-                doubleClick = false;
-            }
+            //if(doubleClick == true)
+           // {
+           //     Destroy(gameObject);
+           //     doubleClick = false;
+           //s }
         }
         else
         {

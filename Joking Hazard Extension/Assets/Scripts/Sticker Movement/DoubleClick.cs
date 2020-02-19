@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class DoubleClick : MonoBehaviour
 {
     public float firstClickTime, timeBetweenClicks;
     private bool coroutineAllowed;
     private int clickCounter;
     private int flip = 180;
-    public MoveSticker kill;
+    public TMP_InputField kill;
 
     void Start()
     {
@@ -16,6 +16,7 @@ public class DoubleClick : MonoBehaviour
         timeBetweenClicks = 0.2f;
         clickCounter = 0;
         coroutineAllowed = true;
+        kill.GetComponent<TMP_InputField>();
     }
 
     // Update is called once per frame
@@ -41,7 +42,7 @@ public class DoubleClick : MonoBehaviour
             if (clickCounter == 2)
             {
                 Debug.Log("Double Click");
-                kill.doubleClick = true;
+                kill.enabled = true;
                 break;
             }
             yield return new WaitForEndOfFrame();

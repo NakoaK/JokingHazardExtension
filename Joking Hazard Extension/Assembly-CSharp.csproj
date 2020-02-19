@@ -101,6 +101,7 @@
     <Compile Include="Assets\Lean\Touch\Scripts\LeanGesture.cs" />
     <Compile Include="Assets\Lean\Touch\Scripts\LeanSnapshot.cs" />
     <Compile Include="Assets\Lean\Touch\Scripts\LeanTouch.cs" />
+    <Compile Include="Assets\MoveText.cs" />
     <Compile Include="Assets\Scripts\Drawable.cs" />
     <Compile Include="Assets\Scripts\DrawingSettings.cs" />
     <Compile Include="Assets\Scripts\Ideas.cs" />
