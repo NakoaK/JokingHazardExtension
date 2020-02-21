@@ -53,7 +53,7 @@ public class MoveSticker : MonoBehaviour
                     startPosX = mousePos.x - this.transform.localPosition.x;
                     startPosY = mousePos.y - this.transform.localPosition.y;
 
-                    spriteOrder.sortingOrder = 2;
+                    spriteOrder.sortingOrder = 1;
                     isBeingHeld = true;   
             }
         }
@@ -62,7 +62,8 @@ public class MoveSticker : MonoBehaviour
     private void OnMouseUp()
     {
         isBeingHeld = false;
-        spriteOrder.sortingOrder = 1;
+        spriteOrder.sortingOrder = 0
+            ;
     }
     public void NoFuck()
     {
