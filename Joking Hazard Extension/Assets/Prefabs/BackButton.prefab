@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 4798134577499577707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1960127, y: 6.114615, z: 1.1960127}
+  m_LocalScale: {x: 1.421222, y: 7.265997, z: 1.421222}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f515f744abbad4942841849e88e3928c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7366a384845987740be1239076993e17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2865189562140309405, guid: c1ece2c0133c5f8419cee59dddfc5266,
           type: 3}
         m_MethodName: backToMenu
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

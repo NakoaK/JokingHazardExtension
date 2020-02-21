@@ -57,9 +57,8 @@ public class paintable : MonoBehaviour
         onPaint.NoDraw();
         movement.YesFuck();
         text.disableText();
-        // onPaint.canDraw = false;
-        //stickerIcon.GetComponent<Image>().sprite = stickerIconON;
-        //paintIcon.GetComponent<Image>().sprite = paintIconOFF;
+        SFX.Playsound("tab");
+
     }
 
     public void paintMode()
@@ -69,10 +68,10 @@ public class paintable : MonoBehaviour
         onPaint.YesDraw();
         movement.NoFuck();
         text.disableText();
+        SFX.Playsound("tab");
 
-        //onPaint.canDraw = true;
-        //paintIcon.GetComponent<Image>().sprite = paintIconON;
-        //stickerIcon.GetComponent<Image>().sprite = stickerIconOFF;
+
+        
     }
 
     public void TextMode()
@@ -80,6 +79,7 @@ public class paintable : MonoBehaviour
         canPaint = false;
         movement.NoFuck();
         text.enableText();
+        SFX.Playsound("tab");
 
 
         onPaint.NoDraw();
@@ -87,12 +87,8 @@ public class paintable : MonoBehaviour
 
     public void updatebrushSize()
     {
+        SFX.Playsound("slider");
         DrawingSettings updateSize = new DrawingSettings();
         updateSize.UpdateBrushSize();
-
-        //brushSizeSliderValue = GameObject.Find("BrushSlider").GetComponent<Slider>().value;
-       // brushSizeSliderValue = brushSizeSliderValue / 20;
-       // brushSize = brushSizeSliderValue;
-
     }
 }

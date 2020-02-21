@@ -89,6 +89,9 @@ public class MoveSticker : MonoBehaviour
     {
 
         if (!isBeingHeld)
+        {
+            SFX.Playsound("trash");
             Destroy(gameObject);
+        }
     }
 }

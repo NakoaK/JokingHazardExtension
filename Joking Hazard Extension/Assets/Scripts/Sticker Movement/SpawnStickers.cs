@@ -14,7 +14,9 @@ public class SpawnStickers : MonoBehaviour
 
     public void buttonPress()
     { 
-        Instantiate(prefab, new Vector3(0,0, 95), Quaternion.identity); 
+        Instantiate(prefab, new Vector3(0,0, 95), Quaternion.identity);
+        SFX.Playsound("sticker");
+
     }
     public void change(Sprite differentSprite)
     {

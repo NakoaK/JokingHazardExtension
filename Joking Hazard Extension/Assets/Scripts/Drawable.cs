@@ -164,6 +164,7 @@ namespace FreeDraw
                         // Use whatever function the current brush is
 
                         current_brush(mouse_world_position);
+                        //SFX.Playsound("drawing");
                     }
 
                     else
@@ -192,6 +193,8 @@ namespace FreeDraw
            
             
         }
+
+        
 
         public void NoDraw()
         {

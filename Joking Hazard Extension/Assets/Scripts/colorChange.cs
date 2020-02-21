@@ -82,6 +82,9 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
+        SFX.Playsound("colorPress");
+
+
         //eraseBool = false;
 
     }
@@ -101,7 +104,10 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-       // eraseBool = false;
+        SFX.Playsound("colorPress");
+
+
+        // eraseBool = false;
 
     }
 
@@ -120,7 +126,10 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-       // eraseBool = false;
+        SFX.Playsound("colorPress");
+
+
+        // eraseBool = false;
 
     }
 
@@ -138,6 +147,9 @@ public class colorChange : MonoBehaviour
         yellowButton.GetComponent<Image>().sprite = yellowOFF;
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
+
+        SFX.Playsound("colorPress");
+
 
         //eraseBool = false;
 
@@ -158,6 +170,9 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueON;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
+        SFX.Playsound("colorPress");
+
+
     }
 
     public void yellowButtonPress()
@@ -175,7 +190,10 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserOFF;
 
-        
+        SFX.Playsound("colorPress");
+
+
+
     }
 
     public void eraserButtonPress()
@@ -198,10 +216,14 @@ public class colorChange : MonoBehaviour
         blueButton.GetComponent<Image>().sprite = blueOFF;
         eraserButton.GetComponent<Image>().sprite = eraserON;
 
+        SFX.Playsound("colorPress");
+
+
     }
 
     public void bombButtonPress()
     {
+        SFX.Playsound("bomb");
         reset.ResetCanvas();
         //SceneManager.LoadScene("EditorScene"); //restart
     }
