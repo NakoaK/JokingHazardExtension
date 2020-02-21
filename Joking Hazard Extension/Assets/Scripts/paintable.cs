@@ -23,6 +23,7 @@ public class paintable : MonoBehaviour
 
     public Drawable onPaint; //= new Drawable();
     public MoveSticker movement;
+    public MoveText text;
 
 
     // Start is called before the first frame update
@@ -55,9 +56,10 @@ public class paintable : MonoBehaviour
 
         onPaint.NoDraw();
         movement.YesFuck();
+        text.disableText();
         // onPaint.canDraw = false;
-        stickerIcon.GetComponent<Image>().sprite = stickerIconON;
-        paintIcon.GetComponent<Image>().sprite = paintIconOFF;
+        //stickerIcon.GetComponent<Image>().sprite = stickerIconON;
+        //paintIcon.GetComponent<Image>().sprite = paintIconOFF;
     }
 
     public void paintMode()
@@ -66,17 +68,21 @@ public class paintable : MonoBehaviour
 
         onPaint.YesDraw();
         movement.NoFuck();
+        text.disableText();
+
         //onPaint.canDraw = true;
-        paintIcon.GetComponent<Image>().sprite = paintIconON;
-        stickerIcon.GetComponent<Image>().sprite = stickerIconOFF;
+        //paintIcon.GetComponent<Image>().sprite = paintIconON;
+        //stickerIcon.GetComponent<Image>().sprite = stickerIconOFF;
     }
 
-    public void textMode()
+    public void TextMode()
     {
         canPaint = false;
+        movement.NoFuck();
+        text.enableText();
+
 
         onPaint.NoDraw();
-        movement.NoFuck();
     }
 
     public void updatebrushSize()
