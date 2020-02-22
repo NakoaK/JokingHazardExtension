@@ -52,4 +52,9 @@ public class DoubleClick : MonoBehaviour
         coroutineAllowed = true;
 
     }
+
+    public void reset()
+    {
+        kill.enabled = false;
+    }
 }

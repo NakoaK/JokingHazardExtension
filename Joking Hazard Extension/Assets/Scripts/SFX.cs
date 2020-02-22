@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -61,5 +62,10 @@ public class SFX : MonoBehaviour
 
 
         }
+    }
+
+    internal static void PlaySound(string v)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ChooseSong
+    - CountdownTimer
     - DeleteText
     - DoubleClick
     - FreeDraw.Drawable
@@ -13,6 +14,7 @@ ScriptsOnlyBuild:
     - Lean.Touch.LeanSelectableRendererColor
     - Lean.Touch.LeanTouch
     - Lean.Touch.LeanTwistRotate
+    - Lean.Touch.LeanTwistRotateAxis
     - MoveSticker
     - MoveText
     - MusicTimer
@@ -37,7 +39,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TMP_SubMeshUI
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -80,25 +81,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12332}
     - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -133,25 +134,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12332}
     - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -200,81 +201,83 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 11238}
     - Class: 114
-      Script: {instanceID: 11322}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11404}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11406}
+      Script: {instanceID: 11412}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11502}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11512}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11604}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11672}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11694}
+      Script: {instanceID: 11612}
     - Class: 114
-      Script: {instanceID: 11776}
+      Script: {instanceID: 11680}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11784}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11788}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11894}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 12110}
     - Class: 114
-      Script: {instanceID: 12262}
+      Script: {instanceID: 12124}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12270}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 12332}
     - Class: 114
-      Script: {instanceID: 12390}
+      Script: {instanceID: 12372}
     - Class: 114
-      Script: {instanceID: 12508}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 12574}
+      Script: {instanceID: 12516}
     - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12582}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12672}
+      Script: {instanceID: 12598}
     - Class: 114
-      Script: {instanceID: 12702}
+      Script: {instanceID: 12680}
     - Class: 114
-      Script: {instanceID: 12782}
+      Script: {instanceID: 12710}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12790}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13158}
     - Class: 114
-      Script: {instanceID: 13338}
+      Script: {instanceID: 13330}
     - Class: 114
-      Script: {instanceID: 13356}
+      Script: {instanceID: 13346}
+    - Class: 114
+      Script: {instanceID: 13364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -319,33 +322,33 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 11918}
+      Script: {instanceID: 11926}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12332}
     - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12594}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13090}
     - Class: 114
-      Script: {instanceID: 13208}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -378,31 +381,31 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11226}
+      Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11406}
+      Script: {instanceID: 11414}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11558}
+      Script: {instanceID: 11566}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11788}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 11898}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 12110}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12332}
     - Class: 114
-      Script: {instanceID: 12432}
+      Script: {instanceID: 12440}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13024}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -432,6 +435,12 @@ ScriptsOnlyBuild:
     className: SFX
   - hash:
       serializedVersion: 2
+      Hash: b8e5b36836156e6e6d8e2037cd75eb57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CountdownTimer
+  - hash:
+      serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -444,7 +453,7 @@ ScriptsOnlyBuild:
     className: LeanFingerSet
   - hash:
       serializedVersion: 2
-      Hash: 6b54e2e8f270ccd03f2dabdf43e2e1a6
+      Hash: 1f0a15391e3341d5b64fc1e04defec0c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveText
@@ -1002,7 +1011,7 @@ ScriptsOnlyBuild:
     className: SimpleScript
   - hash:
       serializedVersion: 2
-      Hash: de548a1cc1c0212e75b88b29d2198077
+      Hash: ca85b98e9dca818cc0a5a5f8425d5639
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MusicTimer
@@ -1313,4 +1322,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Disclaimer.unity
   - Assets/Scenes/Rules.unity
   - Assets/Scenes/Credits.unity
-  playerPath: C:/Users/eae-esports/Desktop/JH2-22-20.apk
+  playerPath: C:/Users/u1082216/Documents/GitHub/JokingHazardExtension/Builds/For
+    the Judge's Reject Beta 3.apk
