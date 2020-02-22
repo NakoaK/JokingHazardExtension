@@ -29,6 +29,7 @@ namespace Lean.Touch
 		public void AddFinger(LeanFinger finger)
 		{
 			Use.AddFinger(finger);
+            
 		}
 
 		/// <summary>If you've set Use to ManuallyAddedFingers, then you can call this method to manually remove a finger.</summary>
@@ -51,7 +52,8 @@ namespace Lean.Touch
 		protected virtual void Awake()
 		{
 			Use.UpdateRequiredSelectable(gameObject);
-		}
+        
+        }
 
 		protected virtual void Update()
 		{
