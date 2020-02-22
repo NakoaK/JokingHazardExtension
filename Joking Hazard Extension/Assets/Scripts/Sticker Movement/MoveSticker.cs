@@ -11,12 +11,12 @@ public class MoveSticker : MonoBehaviour
     public GameObject stickers;
     public BoxCollider2D stickerCollider;
     Vector3 temp;
-    private SpriteRenderer spriteOrder;
+   // private SpriteRenderer spriteOrder;
 
 
     void Start()
     {
-        spriteOrder = GetComponent<SpriteRenderer>();
+       // spriteOrder = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -53,7 +53,7 @@ public class MoveSticker : MonoBehaviour
                     startPosX = mousePos.x - this.transform.localPosition.x;
                     startPosY = mousePos.y - this.transform.localPosition.y;
 
-                    //spriteOrder.sortingOrder = 1;
+                   // spriteOrder.sortingOrder = 1;
                     isBeingHeld = true;   
             }
         }
