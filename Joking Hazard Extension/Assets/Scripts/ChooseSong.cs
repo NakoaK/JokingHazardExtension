@@ -21,7 +21,7 @@ public class ChooseSong : MonoBehaviour
 
         }
 
-        BG.Play();
+        //BG.Play();
     }
 
     // Update is called once per frame
