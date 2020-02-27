@@ -1962,6 +1962,11 @@ PrefabInstance:
       propertyPath: m_textAlignment
       value: 514
       objectReference: {fileID: 0}
+    - target: {fileID: 3982497369244288578, guid: e12ab63bfe6568345b3632e287038c1f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3982497369244288579, guid: e12ab63bfe6568345b3632e287038c1f,
         type: 3}
       propertyPath: m_Enabled

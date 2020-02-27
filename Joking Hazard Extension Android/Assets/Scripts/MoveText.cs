@@ -105,7 +105,7 @@ public class MoveText : MonoBehaviour
 
     public void resetPosition()
     {
-        transform.position = tempPosition;
+        transform.position = new Vector3(transform.position.x, transform.position.y, 100);
         boxCollider.enabled = true;
 
     }
