@@ -18,7 +18,7 @@ public class MoveText : MonoBehaviour
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-        Vector3 tempPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Vector3 tempPosition = new Vector3(transform.position.x, transform.position.y, 400);
        // Vector3 tempScale = new Vector3(50, 50, 1);
 
     }
@@ -33,7 +33,7 @@ public class MoveText : MonoBehaviour
                 mousePos = Input.mousePosition;
                 //mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-                this.gameObject.transform.localPosition = new Vector3((mousePos.x - startPosX), (mousePos.y - startPosY), 90);
+                this.gameObject.transform.localPosition = new Vector3((mousePos.x - startPosX), (mousePos.y - startPosY), 400);
             }
         
             
