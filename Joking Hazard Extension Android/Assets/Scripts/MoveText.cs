@@ -19,24 +19,16 @@ public class MoveText : MonoBehaviour
     {
         boxCollider = GetComponent<BoxCollider2D>();
         Vector3 tempPosition = new Vector3(transform.position.x, transform.position.y, 400);
-       // Vector3 tempScale = new Vector3(50, 50, 1);
-
     }
+
     void Update()
     {
-            //boxCollider.enabled = true;
-        
-        
             if (isBeingHeld == true)
             {
                 Vector3 mousePos;
                 mousePos = Input.mousePosition;
-                //mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
                 this.gameObject.transform.localPosition = new Vector3((mousePos.x - startPosX), (mousePos.y - startPosY), 400);
-            }
-        
-            
+            }           
     }
 
     private void OnMouseDown()
@@ -48,13 +40,11 @@ public class MoveText : MonoBehaviour
 
                 Vector3 mousePos;
                 mousePos = Input.mousePosition;
-                //mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
                 startPosX = mousePos.x - this.transform.localPosition.x;
                 startPosY = mousePos.y - this.transform.localPosition.y;
 
                 isBeingHeld = true;
-
             }
         }
             
@@ -70,17 +60,10 @@ public class MoveText : MonoBehaviour
     {
         canMove = false;
     }
+
     public void enableText()
     {
         canMove = true;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Trash")
-            print("touching");
-        
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -90,11 +73,6 @@ public class MoveText : MonoBehaviour
         {
             
             SFX.Playsound("trash");
-            
-
-            //Destroy(gameObject);
-            //playerText.GetComponent<TextMeshProUGUI>().text = resetText;
-
             playerText.gameObject.SetActive(false);
             transform.position = tempPosition;
 
@@ -109,6 +87,7 @@ public class MoveText : MonoBehaviour
         boxCollider.enabled = true;
 
     }
+
     public void resetScale()
     {
         transform.localScale = new Vector3(50, 50, 1); ;

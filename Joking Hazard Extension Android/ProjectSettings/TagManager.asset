@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Trash
+  - Draw Canvas
+  - Text
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - 
   - Stickers
   - Drawing
-  - 
+  - Text
   - 
   - 
   - 
@@ -39,6 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Draw Canvas
+    uniqueID: 2579190557
+    locked: 0
+  - name: Stickers
+    uniqueID: 63275629
+    locked: 0
+  - name: Text
+    uniqueID: 1237005599
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

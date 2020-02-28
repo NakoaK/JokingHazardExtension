@@ -6,8 +6,6 @@ using FreeDraw;
 
 public class paintable : MonoBehaviour
 {
-
-    public GameObject brush;
     public float brushSize = 0.1f;
     public bool canPaint;
 

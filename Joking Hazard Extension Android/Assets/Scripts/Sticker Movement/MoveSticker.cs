@@ -8,16 +8,8 @@ public class MoveSticker : MonoBehaviour
     private float startPosY;
     public bool isBeingHeld = false;
     public static bool canFuckWith = true;
-    public GameObject stickers;
     public BoxCollider2D stickerCollider;
-    Vector3 temp;
-   // private SpriteRenderer spriteOrder;
 
-
-    void Start()
-    {
-       // spriteOrder = GetComponent<SpriteRenderer>();
-    }
     void Update()
     {
         if (canFuckWith)
@@ -40,6 +32,7 @@ public class MoveSticker : MonoBehaviour
         }
 
     }
+
     private void OnMouseDown()
     {
         if (canFuckWith)
@@ -53,7 +46,6 @@ public class MoveSticker : MonoBehaviour
                     startPosX = mousePos.x - this.transform.localPosition.x;
                     startPosY = mousePos.y - this.transform.localPosition.y;
 
-                   // spriteOrder.sortingOrder = 1;
                     isBeingHeld = true;   
             }
         }
@@ -62,8 +54,8 @@ public class MoveSticker : MonoBehaviour
     private void OnMouseUp()
     {
         isBeingHeld = false;
-        //spriteOrder.sortingOrder = 0;
     }
+
     public void NoFuck()
     {
         canFuckWith = false;
@@ -75,13 +67,6 @@ public class MoveSticker : MonoBehaviour
     {
         canFuckWith = true;
         print("Yes Fuck " + canFuckWith);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Trash")
-            print("touching");
-
     }
 
     private void OnCollisionStay2D(Collision2D collision)
