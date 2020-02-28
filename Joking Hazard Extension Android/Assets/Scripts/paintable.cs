@@ -29,25 +29,21 @@ public class paintable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canPaint = true;
-        
+        canPaint = false;
+        movement.NoFuck();
+        text.disableText();
+        onPaint.NoDraw();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetMouseButton(0) && canPaint)
-        //{
-        //    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit paint;
-        //    if (Physics.Raycast(ray, out paint))
-        //    {
-        //        var go = Instantiate(brush, paint.point + Vector3.back * 0.1f, Quaternion.Euler(-90, 0, 0), transform);
-        //        go.transform.localScale = Vector3.one * brushSize;
-        //    }
-        //}
+    }
 
-        //updatebrushSize();
+    public void started()
+    {
+        paintMode();
     }
 
     public void stickerMode()
@@ -65,12 +61,13 @@ public class paintable : MonoBehaviour
     {
         canPaint = true;
 
-        onPaint.YesDraw();
-        movement.NoFuck();
-        text.disableText();
-        SFX.Playsound("tab");
-
-
+        if (canPaint)
+        {
+            onPaint.YesDraw();
+            movement.NoFuck();
+            text.disableText();
+            SFX.Playsound("tab");
+        }
         
     }
 
@@ -83,6 +80,17 @@ public class paintable : MonoBehaviour
 
 
         onPaint.NoDraw();
+    }
+
+    public void stop()
+    {
+        canPaint = false;
+        movement.NoFuck();
+        text.disableText();
+        onPaint.NoDraw();
+        SFX.Playsound("tab");
+
+
     }
 
     public void updatebrushSize()
