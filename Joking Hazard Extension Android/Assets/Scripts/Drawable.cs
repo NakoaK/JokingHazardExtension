@@ -325,6 +325,8 @@ namespace FreeDraw
         
         void Awake()
         {
+            canDraw = false;
+
             drawable = this;
             // DEFAULT BRUSH SET HERE
             current_brush = PenBrush;
